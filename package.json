@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Web API for ingesting an csv file with pollen information, as part of a distributed system.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon .",
+    "start": "nodemon /src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
