@@ -1,0 +1,26 @@
+{
+  "name": "pollen-ingestor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web API for ingesting an csv file with pollen information, as part of a distributed system.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmdfmateus/pollen-ingestor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
