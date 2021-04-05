@@ -1,0 +1,48 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Pollen Ingestor API",
+        "description": "Web API for ingesting an csv file with pollen information, as part of a distributed system.",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:8000",
+    "basePath": "/api/v1",
+    "paths": {
+        "/pollens": {
+            "post": {
+                "tags": [
+                    "Pollens"
+                ],
+                "description": "Insert pollen data on server",
+                "parameters": [
+                    {
+                        "name": "pollen",
+                        "in": "body",
+                        "description": "Pollen data that we want to insert"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Pollen data inserted successfully"
+                    }
+                }
+            }
+        }
+    },
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ]
+}
