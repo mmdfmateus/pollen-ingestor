@@ -6,7 +6,7 @@ const app = express();
 const port = 9000
 
 app.use(json());
-app.use(router);
+app.use('/api/v1', router);
 
 app.listen(port, function () {
     console.log('Express server listening on ', port);
