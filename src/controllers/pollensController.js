@@ -14,7 +14,7 @@ export const handleUploadCsvRequest = async (req, res) => {
                 fs.unlinkSync(req.file.path);   // remove temp file
                 await postDataToService(fileRows, req.query['city_code']);
                 await log({ message: "Send data to main server successfully" });
-                res.send(request);
+                res.send(fileRows);
             });
     } catch (error) {
         const response = { status: '400', error: `Some error ocurred sending data to main server: ${error.message}` };
