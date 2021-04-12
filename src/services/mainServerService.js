@@ -1,12 +1,17 @@
 import axios from 'axios';
 
 const getInstance = () => axios.create({
-    baseURL: 'https://ennizi6amvyqidx.m.pipedream.net',
-    timeout: 10000,
-    headers: { 'X-Custom-Header': 'foobar' }
+    baseURL: 'http://ec2-34-201-114-94.compute-1.amazonaws.com:3000',
+    timeout: 10000
 });
 
 export const postDataToService = async (data) => {
-    await getInstance().post('/api/v1/record', data);
-    return true;
+    try{
+        const response = await getInstance().post('/api/v1/record', data);
+        console.log(response.data);
+        return response;
+    }
+    catch(err){
+        console.error(err);
+    }
 }
