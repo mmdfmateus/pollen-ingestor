@@ -5,9 +5,10 @@ const getInstance = () => axios.create({
     timeout: 10000
 });
 
-export const postDataToService = async (data) => {
+export const postDataToService = async (data, cityCode) => {
     try{
-        const response = await getInstance().post('/api/v1/record', data);
+        const path = cityCode ? `/api/v1/record?ingestor_code=${cityCode}` : `/api/v1/record`;
+        const response = await getInstance().post(path, data);
         console.log(response.data);
         return response;
     }
